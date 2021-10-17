@@ -1,13 +1,8 @@
 # Install Nginx
 ---
-- hosts: localhost
-  connection: local
+- hosts: target
   become: True
   become_user: root
-  vars:
-     SERVER_NAME: "3.131.158.163"
-     FILE_PATH: "/var/www/html"
-     STUDENT_NAME: "Josh Bolten"
   tasks:
     - name: Install Nginx
       apt:
